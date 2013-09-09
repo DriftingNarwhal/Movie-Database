@@ -4,7 +4,6 @@
  */
 #ifndef MOVIE_H
 #define MOVIE_H
-#include <string.h>
 /*
   * The movie struct.
   * @var name - the name of the movie
@@ -13,6 +12,7 @@
 typedef struct Movie {
 	char* name;
 	int year;
+	int ripped;
 } Movie;
 /*
  * Returns a comparison of the first movie to the second movie.
@@ -22,5 +22,5 @@ typedef struct Movie {
  * @return 0 - if movie1 is equal to movie2
  * @return > 0 - if movie1 is greater than movie2
  */
-int compareMovies(struct Movie* movie1, struct Movie* movie2);
+int compareMovies(Movie* movie1, Movie* movie2);
 #endif

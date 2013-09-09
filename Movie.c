@@ -3,6 +3,7 @@
  * @author Ian Riley <ian-riley@utulsa.edu>
  */
 #include "Movie.h"
+#include <string.h>
 /*
  * Returns a comparison of the first movie to the second movie.
  * @param movie1 - the first argument of the comparison
@@ -15,7 +16,7 @@ int compareMovies(struct Movie* movie1, struct Movie* movie2) {
 	// compare the names of the movies
 	int comparison = strcmp(movie1->name, movie2->name);
 	// check the value of the comparison
-	if(comparison == 0) {
+	if(!comparison) {
 		// return a comparison between the years of the movies
 		return (movie1->year) - (movie2->year);
 	}
